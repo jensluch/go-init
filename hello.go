@@ -1,7 +1,16 @@
-package hello
+package main
 
-import "fmt"
+const API_PATTERN = "/api/"
+const API_PORT = ":8080"
 
 func main() {
-    fmt.Printf("hello, world\n")
+    server := Server {
+        API_PATTERN,
+        "",
+        API_PORT,
+    }
+    //server.SetPattern(API_PATTERN)
+    //server.SetAddr("")
+    //server.SetPort(API_PORT)
+    server.Start()
 }
